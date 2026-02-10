@@ -459,7 +459,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                         .labelLarge
                                         .fontStyle,
                                   ),
-                          hintText: 'Address...',
+                          hintText: 'Street Address...',
                           hintStyle:
                               FlutterFlowTheme.of(context).labelLarge.override(
                                     font: GoogleFonts.inter(
