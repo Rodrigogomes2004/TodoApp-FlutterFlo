@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User",
+  "description": "Schema for user documents in the users collection (Firestore)",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "email": {
+      "description": "User email address",
+      "type": "string",
+      "format": "email"
+    },
+    "display_name": {
+      "description": "User display name",
+      "type": "string",
+      "minLength": 1
+    },
+    "photo_url": {
+      "description": "Profile photo image path or URL",
+      "type": "string"
+    },
+    "uid": {
+      "description": "User UID (auth identifier)",
+      "type": "string",
+      "minLength": 1
+    },
+    "created_time": {
+      "description": "When the user document was created (Firestore DateTime/Timestamp as RFC 3339 date-time string)",
+      "type": "string",
+      "format": "date-time"
+    },
+    "phone_number": {
+      "description": "User phone number",
+      "type": "string"
+    },
+    "birthday": {
+      "description": "User birthday (Firestore DateTime/Timestamp as RFC 3339 date-time string)",
+      "type": "string",
+      "format": "date-time"
+    },
+    "adress": {
+      "description": "User address (field name matches Firestore: 'adress')",
+      "type": "string"
+    }
+  },
+  "required": ["email", "display_name", "uid", "created_time"]
+}
